@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar {
+    position: sticky;
+    top: -50px;
+    margin-top: -10px;
+    z-index: 1000;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar h1{
+    font-size: 18px;
+    font-family: "roboto";
+    letter-spacing: 0.1px;
+    align-self: self-start;
+}
+.links{
+    display: flex;
+}
+.navbtn{
+    text-decoration: none;
+    margin: 10px;
+    font-family: "fira sans";
+    color: var(--secondary-CTA-text);
+    transition: all 0.3s ease-in-out ;
+}
+.navbtn:hover{
+    color: var(--hover);
+}
+
+@media (max-width:800px) {
+    .links{
+        display: none;
+    }
+    .navbar h1{
+        font-size: larger;
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+    }
+    .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    background: color-mix(in srgb, var(--card) 40%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+}
+}

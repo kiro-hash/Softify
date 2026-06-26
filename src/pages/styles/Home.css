@@ -1,0 +1,114 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -80px;
+
+    background:
+        radial-gradient(circle at 15% 90%, rgba(168, 85, 247, 0.18), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.15), transparent 30%),
+        linear-gradient(
+            -120deg,
+            var(--grad) 0%,
+            var(--card) 40%,
+            var(--card) 60%,
+            var(--grad) 100%
+        );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.slogan{
+    color: var(--foreground);
+    background-color: var(--card);
+    padding: 5px 10px;
+    font-size: small;
+    border-radius: 25px;
+    box-shadow: 0 3px 1px var(--accent);
+    margin-bottom: -20px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 100px;
+}
+.left h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #e9d5ff 30%,
+        #c084fc 70%,
+        #a855f7 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.left p{
+    max-width: 50%;
+    margin-top: -20px;
+    color: var(--foreground);
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    width: 80%;
+    padding-right: 30%;
+    border-radius: 20px 20px;
+
+}
+
+.left .btns{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.btns .sec{
+    background-color: var(--grad);
+}
+
+@media (max-width:800px) {
+    .left h1{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .left p{
+        text-align: center;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .right{
+        display: none;
+    }
+    .slogan{
+        margin-bottom: 0;
+    }
+}

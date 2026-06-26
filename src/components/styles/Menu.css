@@ -1,0 +1,56 @@
+.menu {
+  display: none;
+}
+
+.btn {
+  display: none;
+}
+
+.menu-btn {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    gap: 15px;
+  }
+}
