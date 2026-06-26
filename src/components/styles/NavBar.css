@@ -2,7 +2,7 @@
 
 .navbar {
     position: sticky;
-    top: -50px;
+    top: 0px;
     margin-top: -10px;
     z-index: 1000;
     background-color: transparent;

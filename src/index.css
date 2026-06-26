@@ -119,6 +119,23 @@ code {
   animation:bounce forwards 0.6s;
 }
 
+.grad-text{
+  font-size: 4rem;
+    line-height: 1.1;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #e9d5ff 30%,
+        #c084fc 70%,
+        #a855f7 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 @keyframes bounce {
   0% {
     transform: scale(1);
@@ -132,4 +149,8 @@ code {
   100%{
     transform: scale(1);
   }
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
