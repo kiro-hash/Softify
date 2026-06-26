@@ -1,15 +1,64 @@
 import NavBar from "../components/UI/NavBar";
 import { Link } from "react-router-dom";
 import "./styles/Home.css";
+import gsap from "gsap";
+import butterfly from '../assets/butterfly.png'
 import services_data from "../data/services";
 import media_data from "../data/services_media";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import Card from "../components/UI/Card";
 import Card_media from "../components/UI/Card_media";
+import Footer from "../components/UI/Footer";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  useGSAP(() => {
+    gsap.from(".left", {
+      x: -500,
+      duration: 3,
+    });
+    gsap.fromTo(
+      ".right",
+      {
+        x: 400,
+        duration: 2,
+      },
+      {
+        x: 150,
+        duration: 2,
+      },
+    );
+    gsap.to(".right", {
+      scale: 2,
+      scaleX:1.7,
+      y:300,
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    gsap.to(".fly",{
+      x:-400,
+      y:350,
+      scale:0.1,
+      scrollTrigger:{
+        trigger:".hero",
+        start:"top top",
+        end:"bottom top",
+        scrub:true
+      }
+    })
+  });
   return (
     <>
       <NavBar />
+      <div className="fly">
+        <img src={butterfly} alt="" />
+      </div>
       <div className="hero">
         <div className="left">
           <p className="slogan">
@@ -76,9 +125,8 @@ function Home() {
           })}
         </div>
       </div>
-      <div className="section prove">
-        
-      </div>
+      <div className="section prove"></div>
+      <Footer />
     </>
   );
 }

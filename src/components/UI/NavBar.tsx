@@ -1,7 +1,16 @@
 import {Link} from 'react-router-dom'
 import '../styles/NavBar.css'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 import Menu from './menu'
+gsap.registerPlugin(useGSAP);
 function NavBar() {
+  useGSAP(()=>{
+    gsap.from(".navbar",{
+      y:-80,
+      duration:2
+    })
+  })
   return (
     <div className="navbar">
       <Menu/>

@@ -20,3 +20,14 @@
 .card h2{
     margin-left: 10px;
 }
+
+@media (max-width:800px) {
+    .card{
+        max-width: 80%;
+        min-width: 80%;
+        min-height: 20vh;
+    }
+    .card p{
+        max-width: 80%;
+    }
+}
