@@ -1,7 +1,15 @@
-
+import Footer from "../components/UI/Footer"
+import NavBar from "../components/UI/NavBar"
+import './styles/Services.css'
 function Services() {
   return (
-    <div>Services</div>
+    <>
+      <NavBar/>
+      <div className="services">
+
+      </div>
+      <Footer/>
+    </>
   )
 }
 

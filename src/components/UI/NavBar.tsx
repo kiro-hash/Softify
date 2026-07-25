@@ -16,6 +16,7 @@ function NavBar() {
       <Menu/>
         <h1>Softify_Dev</h1>
         <div className="links">
+          <Link className='navbtn' to={"/"}>Home</Link>
           <Link className='navbtn' to={"/services"}>Services</Link>
           <Link className='navbtn' to={"/projects"}>Projects</Link>
           <Link className='navbtn' to={"/contact"}>Contact</Link>

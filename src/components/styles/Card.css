@@ -12,6 +12,12 @@
     background-color: var(--card);
     min-height: 35vh;
     border-radius: 19px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 0 5px 5px var(--accent);
+    transform: translateY(-3px);
 }
 .card p{
     max-width: 90%;

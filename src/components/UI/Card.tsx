@@ -3,11 +3,12 @@ import '../styles/Card.css'
 type Props = {
   title: string;
   desc:string;
+  className:string;
 };
 
-function Card({ title , desc}: Props) {
+function Card({ title , desc , className}: Props) {
   return (
-    <div className="card">
+    <div className={className}>
       <div className="icon">
         <svg></svg>
       </div>

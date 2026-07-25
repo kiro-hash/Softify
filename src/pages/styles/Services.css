@@ -1,0 +1,29 @@
+.services {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -80px;
+
+    background:
+        radial-gradient(circle at 15% 90%, rgba(168, 85, 247, 0.18), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.15), transparent 30%),
+        linear-gradient(
+            -120deg,
+            var(--grad) 0%,
+            var(--card) 40%,
+            var(--card) 60%,
+            var(--grad) 100%
+        );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services::before,
+.services::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}

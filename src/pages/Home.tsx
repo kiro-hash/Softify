@@ -2,7 +2,7 @@ import NavBar from "../components/UI/NavBar";
 import { Link } from "react-router-dom";
 import "./styles/Home.css";
 import gsap from "gsap";
-import butterfly from '../assets/butterfly.png'
+import butterfly from "../assets/butterfly.png";
 import services_data from "../data/services";
 import media_data from "../data/services_media";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -32,8 +32,8 @@ function Home() {
     );
     gsap.to(".right", {
       scale: 2,
-      scaleX:1.7,
-      y:300,
+      scaleX: 1.7,
+      y: 300,
       scrollTrigger: {
         trigger: ".hero",
         start: "top top",
@@ -41,17 +41,26 @@ function Home() {
         scrub: true,
       },
     });
-    gsap.to(".fly",{
-      x:-400,
-      y:350,
-      scale:0.1,
-      scrollTrigger:{
-        trigger:".hero",
-        start:"top top",
-        end:"bottom top",
-        scrub:true
-      }
-    })
+    gsap.to(".fly", {
+      x: -400,
+      y: 350,
+      scale: 0.1,
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    gsap.from(".card", {
+      opacity: 0,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".section",
+        start: "top center",
+        end: "bottom top",
+      },
+    });
   });
   return (
     <>
@@ -99,6 +108,7 @@ function Home() {
         <div className="cards">
           {services_data.map((data, index) => (
             <Card
+              className="card"
               key={index}
               title={data.title}
               desc={data.desc}
@@ -125,7 +135,28 @@ function Home() {
           })}
         </div>
       </div>
-      <div className="section prove"></div>
+      <div className="section prove">
+        <p className="slogan">Featured Work</p>
+        <h1 className="grad-text">Proven Results</h1>
+        <p className="margintop">
+          Explore our portfolio of delivered projects
+        </p>
+        <div className="sec1">
+          <div className="pr left-sec1"></div>
+          <div className="pr right-sec1"></div>
+        </div>
+
+        <div className="sec2">
+          <div className="pr left-sec2"></div>
+          <div className="pr right-sec2"></div>
+        </div>
+
+        <div className="sec3">
+          <div className="pr left-sec3"></div>
+          <div className="pr middle-sec3"></div>
+          <div className="pr right-sec3"></div>
+        </div>
+      </div>
       <Footer />
     </>
   );
