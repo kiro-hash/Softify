@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import '../styles/NavBar.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import Menu from './menu'
+import Menu from './Menu'
 gsap.registerPlugin(useGSAP);
 function NavBar() {
   useGSAP(()=>{

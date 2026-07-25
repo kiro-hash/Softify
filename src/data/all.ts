@@ -1,11 +1,17 @@
-const services = [
+export interface Service {
+  title: string;
+  desc: string;
+  URL?: string;
+}
+
+const services: Service[] = [
   {
     title: "Web Development",
     desc: "Modern responsive websites with high performance",
   },
   {
     title: "Mobile Apps",
-    desc: "Android & ios with smooth UX",
+    desc: "Android & iOS with smooth UX",
   },
   {
     title: "UI/UX Design",

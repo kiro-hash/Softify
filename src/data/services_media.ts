@@ -1,4 +1,10 @@
-const services = [
+export interface ServiceMedia {
+  URL: string;
+  title: string;
+  desc: string;
+}
+
+const services: ServiceMedia[] = [
   {
     URL: "https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80",
     title: "Graphic Design",
