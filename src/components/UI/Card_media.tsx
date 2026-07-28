@@ -4,11 +4,12 @@ type Props = {
   image: string;
   title: string;
   desc: string;
+  className:string;
 };
 
-const Card_media = ({ image, title, desc }: Props) => {
+const Card_media = ({ image, title, desc ,className}: Props) => {
   return (
-    <div className="card_media">
+    <div className={`media-card ${className || ""}`}>
       <div className="img">
         <img src={image} alt={title} />
       </div>

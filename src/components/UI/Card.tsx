@@ -10,7 +10,6 @@ function Card({ title , desc , className}: Props) {
   return (
     <div className={className}>
       <div className="icon">
-        <svg></svg>
       </div>
       <h2>{title}</h2>
       <p>{desc}</p>

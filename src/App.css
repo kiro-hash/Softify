@@ -1,4 +1,38 @@
+:root{
+    /* Backgrounds */
+    --background:#060816;
+    --surface:#0D1224;
+    --card:#12182C;
+    --card-hover:#1A2240;
 
+    /* Brand */
+    --primary:#8B5CF6;
+    --primary-light:#A855F7;
+    --secondary:#3B82F6;
+    --accent:#06B6D4;
+
+    /* Text */
+    --foreground:#F8FAFC;
+    --foreground-muted:#94A3B8;
+
+    /* Borders */
+    --border:rgba(255,255,255,.08);
+
+    /* Hero */
+    --hero-grad-1:rgba(139,92,246,.18);
+    --hero-grad-2:rgba(59,130,246,.15);
+
+    /* Shadows */
+    --shadow-lg:0 30px 80px rgba(0,0,0,.35);
+    --shadow-glow:0 0 80px rgba(139,92,246,.2);
+
+    /* Gradient */
+    --gradient:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+}
 #center {
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@ function NavBar() {
   useGSAP(()=>{
     gsap.from(".navbar",{
       y:-80,
-      duration:2
+      duration:1
     })
   })
   return (

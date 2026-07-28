@@ -1,8 +1,13 @@
 .services {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: -80px;
+    padding: 120px 5% 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background:
         radial-gradient(circle at 15% 90%, rgba(168, 85, 247, 0.18), transparent 35%),
@@ -14,9 +19,6 @@
             var(--card) 60%,
             var(--grad) 100%
         );
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .services::before,
@@ -26,4 +28,59 @@
     border-radius: 50%;
     filter: blur(120px);
     pointer-events: none;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.services input {
+    width: min(500px, 90%);
+    padding: 14px 20px;
+
+    background: var(--card);
+    color: var(--foreground);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    outline: none;
+    transition: .3s ease;
+}
+
+.services input::placeholder {
+    color: rgba(255,255,255,.5);
+}
+
+.services input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(168, 85, 247, .25);
+}
+
+.services_sec {
+    width: min(1400px, 100%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .services {
+        padding: 100px 20px 60px;
+    }
+
+    .services input {
+        width: 100%;
+    }
+
+    .services_sec {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
